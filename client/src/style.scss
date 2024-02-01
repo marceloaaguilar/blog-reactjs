@@ -3,10 +3,8 @@ $lightPurple: rgb(244, 206, 255);
 $yellow: #e29300;
 
 .app{
-    display: flex;
-    justify-content: center;
+    
     .container{
-        width: 1024px;
         .link{
             text-decoration: none;
             color: inherit;
