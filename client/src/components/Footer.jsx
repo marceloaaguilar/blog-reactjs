@@ -1,9 +1,14 @@
 import React from "react";
-
+import Logo from "../images/ate-logo.png"
 
 
 const Footer = () => {
-    return <div> Footer</div>
+    return (
+        <footer>
+            <img src={Logo} />
+            <span>Marcelo D'Almeida - 2024</span>
+        </footer>
+    )
 }
 
 
