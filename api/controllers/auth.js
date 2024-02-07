@@ -2,7 +2,6 @@ import {db} from "../db.js"
 import bcrypt from "bcryptjs"
 
 export const register = (req,res)=>{
-    console.log("test")
     const q = "SELECT * FROM users WHERE email = ? OR username = ?"
 
     db.query(q,[req.body.email, req.body.username], (err,data)=>{

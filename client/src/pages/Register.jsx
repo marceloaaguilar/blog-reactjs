@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {Link} from 'react-router-dom'
 import axios from "axios"
 
-
-
 const Register = () => {
 
 
@@ -14,17 +12,21 @@ const Register = () => {
     })
 
     const handlerChange = e =>{
-        setInputs(prev=> ({...prev, [e.target.name]: e.target.value}))
+        setInputs(prev => ({...prev, [e.target.name]: e.target.value}))
     }
 
     const handleSubmit = async e =>{
         e.preventDefault()
         try{
-            const response = await axios.post("/auth/register", inputs)
-            console.log(response);
+            const response = await axios.post("http://localhost:8800/auth/register", inputs, {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                  }
+            })
+            console.log("Test");
         } 
         catch(err){
-            console.log(err)
+            console.log(err.response)
         }
     }
 
